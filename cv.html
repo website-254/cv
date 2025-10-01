@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidney Matolo Humphrey - IT Specialist</title>
+    <meta name="description" content="Experienced IT Professional specializing in the design, security, and optimization of network infrastructure and cloud solutions to drive business efficiency and resilience.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, #ffffff, #f0f4f8);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e5a8e, #2b9d9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2b9d9d;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 24px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(30, 90, 142, 0.05), rgba(43, 157, 157, 0.05));
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #1e5a8e, #2b9d9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: #2b9d9d;
+            margin-bottom: 16px;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto 32px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4b5563;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e5a8e, #2b9d9d);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2b9d9d;
+            border: 2px solid #2b9d9d;
+        }
+
+        .btn-secondary:hover {
+            background: #2b9d9d;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 24px;
+        }
+
+        section h2 {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        section .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        /* Experience */
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #2b9d9d, #1e5a8e);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding: 24px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(30, 90, 142, 0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 32px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2b9d9d;
+            border: 3px solid white;
+        }
+
+        .timeline-item h3 {
+            font-size: 24px;
+            color: #1e5a8e;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item .company {
+            font-size: 18px;
+            color: #2b9d9d;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .period {
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-item li {
+            padding-left: 24px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .timeline-item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #2b9d9d;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(30, 90, 142, 0.1);
+        }
+
+        .skill-card h3 {
+            font-size: 20px;
+            color: #1e5a8e;
+            margin-bottom: 12px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 12px;
+            background: rgba(43, 157, 157, 0.1);
+            color: #2b9d9d;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(30, 90, 142, 0.1);
+        }
+
+        .education-card h3 {
+            font-size: 22px;
+            color: #1e5a8e;
+            margin-bottom: 8px;
+        }
+
+        .education-card .institution {
+            color: #2b9d9d;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .education-card .period {
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(30, 90, 142, 0.05), rgba(43, 157, 157, 0.05));
+        }
+
+        .contact-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(30, 90, 142, 0.15);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #f9fafb;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(43, 157, 157, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2b9d9d;
+            font-size: 24px;
+        }
+
+        .contact-details p:first-child {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-details p:last-child {
+            color: #6b7280;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            padding: 32px 24px;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">SMH</div>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sidney Matolo Humphrey</h1>
+            <p class="subtitle">IT Specialist</p>
+            <p class="description">
+                Experienced IT Professional specializing in the design, security, and optimization of network infrastructure and cloud solutions to drive business efficiency and resilience.
+            </p>
+            
+            
+
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">Building robust IT infrastructure across diverse environments to ensure security, scalability, and performance.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Regional ICT Officer</h3>
+                    <div class="company">CIHEB Kenya (Center for International Health, Education and Biosecurity-Kenya)</div>
+                    <div class="period">January 2025 - March 2025</div>
+                    <ul>
+                        <li>Data Security & Integrity: Implemented password policies, deployed Mobile Device Management (MDM), and strengthened network security (VPNs/firewalls) to protect data and hardware.</li>
+                        <li>Technical Collaboration & Project Implementation: Partnered with various IT and Program teams to test and deploy CSPro tablet forms and provided cross-regional IT support.</li>
+                        <li>Data Quality: Conducted daily data quality control checks and generated reports to enhance decision-making.</li>
+                        <li>IT Support & Training: Provided technical training and ad-hoc support to field teams, ensuring compliance with standard operating procedures (SOPs).</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>IT Specialist</h3>
+                    <div class="company">Manage IT Ltd</div>
+                    <div class="period">November 2022 - December 2024</div>
+                    <ul>
+                        <li>Network & Infrastructure Management: Successfully managed and maintained complex network infrastructure (LAN/WAN/VPNs, firewalls: Sophos, Fortinet) for organizations with 150+ users, reducing latency by 20% and achieving 98% system uptime.</li>
+                        <li>Security & Resilience: Enhanced security by deploying and managing comprehensive cybersecurity solutions (Sophos Central, Bitdefender, etc.), and increased system resilience by 96% through robust data backup and disaster recovery procedures</li>
+                        <li>Cloud Migration & Project Leadership: Led a technical team to successfully transition 20+ clients to cloud platforms (Microsoft 365, Google Workspace), achieving 99% efficiency and a 20% cost reduction while demonstrating strong project management skills</li>
+                        <li>Technical Support & Service Delivery: Provided timely technical support for over 100 end-users, managed 100+ help-desk tickets per week with a 96% customer satisfaction rating, and conducted preventative maintenance and user training.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>IT Support Specialist</h3>
+                    <div class="company">Manage IT Ltd</div>
+                    <div class="period">2017 - 2019</div>
+                    <ul>
+                        <li>End-User Support & Issue Resolution: Provided technical support to 100+ end-users for hardware and software issues via phone, email, ticketing systems, and in-person, ensuring customer satisfaction.</li>
+                        <li>System Maintenance & Reliability: Conducted regular system checks and preventive maintenance to minimize downtime, and promptly monitored systems for performance and security issues.</li>
+                        <li>Data Security & Documentation: Implemented robust data backup procedures to safeguard critical information and maintained detailed records of IT incidents and configurations for effective management and analysis</li>
+                        <li>Strategic Collaboration: Collaborated with departments to identify and implement technology solutions directly aligned with business objectives.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Assistant Administrator</h3>
+                    <div class="company">Pacis Insurance </div>
+                    <div class="period">2018 - 2019</div>
+                    <ul>
+                        <li>Provided first-level technical support</li>
+                        <li>Assisted in computer repairs and maintenance</li>
+                        <li>Supported network installations</li>
+                        <li>Maintained IT equipment inventory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <p class="section-subtitle">Comprehensive Expertise in Cross-Functional IT Systems and Infrastructure</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Network Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Network Design</span>
+                        <span class="skill-tag">Routing & Switching</span>
+                        <span class="skill-tag">VPN Configuration</span>
+                        <span class="skill-tag">Wireless Networkingt</span>
+                        <span class="skill-tag">Firewall Management</span>
+                        <span class="skill-tag">SD-WAN Implementation</span>
+                        <span class="skill-tag">VoIP/Telephony Systems</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Security Protocols</span>
+                        <span class="skill-tag">Threat Assessment</span>
+                        <span class="skill-tag">Vulnerability Management</span>
+                        <span class="skill-tag">Endpoint Detection and Response (EDR)</span>
+                        <span class="skill-tag">Identity and Access Management (IAM)</span>
+                        <span class="skill-tag">Intrusion Detection/Prevention Systems (IDS/IPS)</span>
+                        >
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cloud Solutions</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cloud Migration Strategy</span>
+                        <span class="skill-tag">Microsoft 365 / Exchange Online</span>
+                        <span class="skill-tag">Google Workspace Administration</span>
+                        <span class="skill-tag">Hybrid Cloud Management</span>
+                        <span class="skill-tag">Cloud Identity Management</span>
+                        <span class="skill-tag">Cloud Infrastructure (IaaS)</span>
+                        
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Systems Administration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Server Provisioning & Deployment</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Linux Administration</span>
+                        <span class="skill-tag">Patch Management</span>
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">Group Policy Management (GPO)</span>
+                        <span class="skill-tag">Identity Management (IDM)</span>
+                        <span class="skill-tag">Monitoring & Logging</span>
+                        <span class="skill-tag">Storage Area Networks (SAN/NAS)</span>
+                        <span class="skill-tag">Backup and Recovery Solutions</span>
+                    </div>
+                </div>
+
+              
+
+                <div class="skill-card">
+                    <h3>Technical Support</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Service Level Agreement (SLA) Adherence</span>
+                        <span class="skill-tag">User Training</span>
+                        <span class="skill-tag">Documentation</span>
+                        <span class="skill-tag">Help Desk Management</span>
+                        <span class="skill-tag">Root Cause Analysis (RCA)</span>
+                        <span class="skill-tag">Remote Support</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Project Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">IT Strategy</span>
+                        <span class="skill-tag">Risk Mitigation</span>
+                        <span class="skill-tag">Budget Planning</span>
+                        <span class="skill-tag">Stakeholder Communication</span>
+                        <span class="skill-tag">Project Scheduling</span>
+                        <span class="skill-tag">Quality Assurance (QA)</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Remote Management Tools (e.g RMM, TeamViewer)</span>
+                        <span class="skill-tag">Monitoring Tools</span>
+                        <span class="skill-tag">Backup Solutions</span>
+                        <span class="skill-tag">Network Management Systems (NMS)</span>
+                         <span class="skill-tag">Endpoint Security Suites (e.g Bitdefender, ESET,Sophos endpoint)</span>
+                          <span class="skill-tag">Cloud Administration Consoles (e.g., Azure Portal, Google Admin)</span>
+                           <span class="skill-tag">Firewall Appliances (e.g., Fortinet, Sophos XG)</span>
+                            <span class="skill-tag">Ticketing Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+            <p class="section-subtitle">Academic background and professional development</p>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <div class="institution">Jomo Kenyatta University of Agriculture and Technology(JKUAT)</div>
+                    <div class="period">2014 - 2018</div>
+                    <p>Comprehensive study of computer systems, networking, and software development with focus on enterprise IT solutions.</p>
+                </div>
+
+                <div class="education-card">
+                    <h3>Professional Certifications</h3>
+                    <ul class="cert-list">
+                        <li>ITIL Foundation</li>
+                        <li>Microsoft Certified: Azure Administrator</li>
+                        <li>Sophos Certified Engineer</li>
+                        <li>Network Support and Security</li>
+                        <li>Certified Database Administration</li>
+                        <li>Network Support and Security</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Let's discuss how I can help with your IT infrastructure needs</p>
+            
+            <div class="contact-card">
+                <div class="contact-grid">
+                    <a href="mailto:sidneymbai@gmail.com" class="contact-link">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <p>Email</p>
+                            <p>sidneymbai@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+254717406007" class="contact-link">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <p>Phone</p>
+                            <p>+254 717 406 007</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-link">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <p>Location</p>
+                            <p>Kenya</p>
+                        </div>
+                    </div>
+
+                    <a href="https://www.linkedin.com/in/sidney-matolo-062073348/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <p>LinkedIn</p>
+                            <p>Connect on LinkedIn</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Sidney Matolo Humphrey. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
